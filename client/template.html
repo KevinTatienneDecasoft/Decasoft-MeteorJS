@@ -1,0 +1,73 @@
+<template name="testtemplate">
+  <p>Test template html</p>
+</template>
+
+<template name="personsList">
+	<center>
+	<table border="1">
+		<tr>
+		    <th>Nom</th>
+		    <th>Age</th>
+		    <th>Visible</th>
+		    <th>&nbsp;</th>
+		</tr>
+		{{#each persons}}
+			{{#if visible}}
+				{{> person}}
+			{{/if}}
+		{{/each}}
+	</table>
+	</center>
+</template>
+<template name="person">
+	<tr>
+		<td>{{ pseudo }}</td>
+		<td>{{ age }}</td>
+		<td>{{ visible }}</td>
+		<td><button id="{{ _id }}" class="material-icons">delete</button></td>
+	</tr>
+</template>
+
+
+<template name="addPerson">
+	<center>
+		<form>
+		<p>Nom</p>
+    	<input id="pseudo" name="pseudo" type="text" placeholder="nom de la personne">
+    	<p>Age</p>
+    	<input id="age" type="text" placeholder="age de la personne">
+    	
+    	<p>Modification</p>
+    	<input id="modif" type="text" disabled="true">
+    	<p></p>
+    	<input type="submit" value="Ajouter">
+  	</form>
+  	<br/>
+	</center>
+	
+</template>
+
+<template name="activePerson">
+	<center>
+	<div>Personne active {{ activePerson }}</div>
+	</center>
+</template>
+
+<template name="SessionServers">
+	<center>
+	{{#if compare SessionServers "connected"}}
+		<div class="alert alert-success" role="alert">
+		  <strong>Status Server : </strong> {{ SessionServers }}
+		</div>		
+		{{else}}	
+		<div class="alert alert-warning" role="alert">
+			  <strong>Status Server : </strong> Status Server : {{ SessionServers }}
+			</div>
+	{{/if}}	
+
+
+	</center>
+</template>
+<template name = "myTemplate">
+   <button>CLEAR</button>
+</template>

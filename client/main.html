@@ -1,17 +1,32 @@
+
+
 <head>
-  <title>bestDashBoard</title>
+  <title>AppWeb</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <!-- Material Design fonts -->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
 
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- Bootstrap Material Design -->
+  <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+
+  {{> SessionServers}}
+  {{> addPerson}}
+  {{> personsList}}
   {{> hello}}
-  {{> info}}
+    {{> myTemplate}}
 </body>
 
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
+  <img id="image" src="" width="600" height="700" style="visibility:hidden">
 </template>
 
 <template name="info">
