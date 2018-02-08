@@ -7,7 +7,7 @@ import './main.html';
 hosts = new Mongo.Collection('hosts');
 
 Meteor.startup(function () {
-   // Meteor.subscribe('hosts');
+   Meteor.subscribe('hosts');
 });
 
 
@@ -27,11 +27,14 @@ Template.hello.events({
     // increment the counter when button is clicked
     //instance.counter.set(instance.counter.get() + 1);
 
-    Meteor.call("testMe", function(error, results) {
+    /*Meteor.call("testMe", function(error, results) {
         console.log(results.data.original_title); //results.data should be a JSON object
         document.getElementById("image").src="http://image.tmdb.org/t/p/w185"+results.data.poster_path;
         document.getElementById("image").style.visibility='visible';
-    });
+    });*/
+    console.log(hosts.find());
+
+
   },
 });
 
@@ -116,18 +119,29 @@ Template.registerHelper('compare', function(v1, v2) {
 if (Meteor.isClient) {
 
    var counter = 0;
-
+   var page = 1
    var myInterval = Meteor.setInterval(function() {
       counter ++
+      if(counter > 19){
+      	counter = 0
+      	page ++;
+      }
       console.log("Interval called " + counter + " times...");
 
 
-     Meteor.call("testMe", function(error, results) {
+     /*Meteor.call("testMe", function(error, results) {
         console.log(results.data.original_title); //results.data should be a JSON object
         document.getElementById("image").src="http://image.tmdb.org/t/p/w185"+results.data.poster_path;
         document.getElementById("image").style.visibility='visible';
-    });
+	});*/
 
+        Meteor.call("CallPopular",page, function(error,results){
+        	console.log(results);
+        	//console.log(results.data.results[counter]); //results.data should be a JSON object
+        	document.getElementById("image").src="http://image.tmdb.org/t/p/w185"+results.data.results[counter].poster_path;
+       		document.getElementById("image").style.visibility='visible';
+        });
+    
      
    }, 2000);
 
