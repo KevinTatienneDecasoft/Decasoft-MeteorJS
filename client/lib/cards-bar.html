@@ -1,0 +1,98 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>CARDS CLASSEMENT</h1>
+        </div>
+        <!-- <div class="row">
+            <div>
+                {{ > cardsBarGraph }}
+            </div>
+        </div> -->
+        <div class="row">
+            {{ > cardsImage }}
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-1"> 
+                1
+            </div>
+            <div class="col-lg-1"> 
+                2
+            </div>
+            <div class="col-lg-1"> 
+                3
+            </div>
+            <div class="col-lg-1"> 
+                4
+            </div>
+            <div class="col-lg-1"> 
+                5
+            </div>
+            <div class="col-lg-1"> 
+                6
+            </div>
+            <div class="col-lg-1"> 
+                7
+            </div>
+            <div class="col-lg-1"> 
+                8
+            </div>
+            <div class="col-lg-1"> 
+                9
+            </div>
+            <div class="col-lg-1"> 
+                10
+            </div>
+            <div class="col-lg-1"> 
+                11
+            </div>
+            <div class="col-lg-1"> 
+                12
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                {{ > cardsLineGraph }}
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-lg-4">
+                <img class="threeCards cardOne" src="https://art.hearthstonejson.com/v1/render/latest/enUS/256x/LOOT_125.png" alt="">
+            </div>
+            <div class="col-lg-4">
+                <img class="threeCards cardTwo" src="https://art.hearthstonejson.com/v1/render/latest/enUS/256x/LOOT_413.png" alt="">
+            </div>
+            <div class="col-lg-4">
+                <img class="threeCards cardThree" src="https://art.hearthstonejson.com/v1/render/latest/enUS/256x/LOOT_383.png" alt="">
+            </div>
+        </div>
+        <div class="row text-center updownvalue">
+            {{ > cardsUpDown}}
+        </div>
+    </div>
+</body>
+
+
+<template name="cardsBarGraph">
+	<canvas id="myBarChart"></canvas>
+</template>
+
+<template name="cardsLineGraph">
+	<canvas id="myLineChart"></canvas>
+</template>
+
+<template name="cardsImage">
+    {{#each images }}
+        <div class="col-lg-1 image_card"> 
+            <img src="{{ this }}" />
+        </div>
+    {{/each}}
+</template>
+
+<template name="cardsUpDown">
+    {{#each variabilities}}
+        <div class="col-lg-4">
+            {{ this }}
+        </div>
+    {{/each}}
+</template>

@@ -1,0 +1,52 @@
+.card-table td {
+	width: 45px;
+}
+
+.chartjs-render-monitor {
+	height: 100% !important; 
+	width: 100% !important;
+}
+
+.cardBar {
+	width: 70% !important;
+}
+
+.cardImage {
+	width: 5% !important;
+}
+
+img {
+	width: 200px;
+    height: 150px;
+	margin: -15px -70px !important;
+}
+
+.image_card {
+	/* height: 100px !important;
+	width: 100px !important; */
+	height: 125px;
+	width: 120px;
+	border: solid 5px brown;
+	overflow: hidden;
+}
+
+.threeCards {
+	height: 300px !important;
+	margin: 0px 0px !important
+}
+
+.cardOne {
+	border : red solid 3px;
+}
+
+.cardTwo {
+	border : blue solid 3px;
+}
+
+.cardThree {
+	border : green solid 3px;
+}
+
+.updownvalue {
+	font-size: 200%;
+}
