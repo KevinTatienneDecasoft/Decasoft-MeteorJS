@@ -1,5 +1,3 @@
-
-
 <head>
   <title>AppWeb</title>
 </head>
@@ -11,30 +9,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
   <!-- Bootstrap Material Design -->
   <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
-  <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
-
-  {{> SessionServers}}
-  {{> addPerson}}
-  {{> personsList}}
-  {{> hello}}
-    {{> myTemplate}}
+  <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css"> {{> graphmovie}}
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-  <img id="image" src="" width="600" height="700" style="visibility:hidden">
-</template>
-
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>

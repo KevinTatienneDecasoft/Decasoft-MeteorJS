@@ -7,8 +7,11 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "bootstrap-material-design": "^4.0.0-beta.4",
+    "chart.js": "^2.7.1",
     "gulp": "^3.9.1",
     "meteor-node-stubs": "^0.3.2",
+    "mongodb": "^3.0.2",
+    "palette-js": "^1.0.3",
     "session": "^0.1.0"
   }
 }

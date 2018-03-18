@@ -23,3 +23,4 @@ session
 kadira:flow-router
 kadira:blaze-layout
 http
+chart:chart
