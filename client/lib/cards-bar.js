@@ -41,9 +41,9 @@ function getThreeCards() {
     if (cardsList.length > 0) {
         
         for (i=0; i<=4; i++) {
-            cardOne.unshift(cardsList[i][43474]);
-            cardSecond.unshift(cardsList[i][45930]);
-            cardThird.unshift(cardsList[i][46082]);
+            cardOne.unshift(cardsList[i][41243]);
+            cardSecond.unshift(cardsList[i][40496]);
+            cardThird.unshift(cardsList[i][41120]);
         }
         
         var cardsReturn = [];
@@ -69,9 +69,9 @@ function getThreeCardsUpDown() {
 
     if (cardsList.length > 0) {
         for (i=0; i<=1; i++) {
-            cardOne.unshift(cardsList[i][43474]);
-            cardSecond.unshift(cardsList[i][45930]);
-            cardThird.unshift(cardsList[i][46082]);
+            cardOne.unshift(cardsList[i][41243]);
+            cardSecond.unshift(cardsList[i][40496]);
+            cardThird.unshift(cardsList[i][41120]);
         }
         if (cardOne[1] > cardOne[0]) {
             oneStatus = "+";
@@ -210,7 +210,7 @@ function drawLineChart() {
     var cards = getThreeCards();
 
     var dataFirst = {
-        label: "Stoneskin Basilisk",
+        label: "RED",
         data: cards[0],
         lineTension: 0.3,
         borderColor: 'red',
@@ -220,7 +220,7 @@ function drawLineChart() {
     };
 
     var dataSecond = {
-        label: "Plated Beetle",
+        label: "BLUE",
         data: cards[1],
         lineTension: 0.3,
         borderColor: 'blue',
@@ -230,7 +230,7 @@ function drawLineChart() {
     };
 
     var dataThird = {
-        label: "Hungry Ettin",
+        label: "GREEN",
         data: cards[2],
         lineTension: 0.3,
         borderColor: 'green',
